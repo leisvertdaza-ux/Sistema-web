@@ -1,0 +1,174 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY GENERAL */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f172a;
+    color: #fff;
+}
+
+/* SOLO DASHBOARD USA FLEX */
+body.dashboard {
+    display: flex;
+}
+
+/* LOGIN */
+.login-box {
+    width: 320px;
+    margin: 100px auto;
+    padding: 30px;
+    background: #1e293b;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.login-box h2 {
+    margin-bottom: 10px;
+}
+
+.login-box p {
+    color: #94a3b8;
+}
+
+/* INPUTS */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+
+/* BOTONES */
+button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(45deg, #38bdf8, #6366f1);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    background: #020617;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    box-shadow: 5px 0 20px rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.sidebar button {
+    margin: 8px 0;
+    background: linear-gradient(45deg, #38bdf8, #6366f1);
+    border-radius: 8px;
+    text-align: left;
+}
+
+/* BOTON SALIR */
+.logout {
+    background: #ef4444;
+}
+
+/* MAIN */
+.main {
+    margin-left: 240px;
+    padding: 20px;
+    width: calc(100% - 240px);
+    min-height: 100vh;
+}
+
+/* HEADER */
+.header {
+    background: #1e293b;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    flex: 1;
+    min-width: 200px;
+}
+
+/* TABLAS */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: #fff;
+    color: #000;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background: #6366f1;
+    color: white;
+}
+
+td, th {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* BOTONES EN TABLA */
+.card button {
+    width: auto;
+    padding: 6px 12px;
+    margin: 2px;
+}
+
+/* HOVER FILAS */
+tr:hover {
+    background: #f1f5f9;
+}
+
+/* LOGO */
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.logo h3 {
+    font-size: 16px;
+}
+
+.logo p {
+    font-size: 12px;
+    color: #94a3b8;
+}

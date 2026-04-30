@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro - Sistema Escolar</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="login-box">
+    <h2>Registrarse</h2>
+
+    <form onsubmit="register(); return false;">
+        
+        <input type="email" id="email" placeholder="Correo electrónico" required>
+
+        <input type="password" id="password" placeholder="Contraseña" required>
+
+        <select id="rol" required>
+            <option value="">Seleccionar rol</option>
+            <option value="admin">Administrador</option>
+            <option value="docente">Docente</option>
+            <option value="apoderado">Apoderado</option>
+        </select>
+
+        <button type="submit">Crear cuenta</button>
+
+    </form>
+
+    <p style="margin-top:10px;">
+        ¿Ya tienes cuenta?
+        <a href="index.html" style="color:#38bdf8;">Inicia sesión</a>
+    </p>
+</div>
+
+<!-- SCRIPTS -->
+<script src="js/db.js"></script>
+<script src="js/auth.js"></script>
+
+</body>
+</html>
