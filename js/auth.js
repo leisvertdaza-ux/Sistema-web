@@ -1,4 +1,31 @@
-// js/auth.js
+// ================= USUARIOS POR DEFECTO =================
+(function () {
+    let usuarios = getData("usuarios");
+
+    if (!usuarios || usuarios.length === 0) {
+        let usuariosDefault = [
+            {
+                email: "admin@gmail.com",
+                password: "123456",
+                rol: "admin"
+            },
+            {
+                email: "docente@gmail.com",
+                password: "123456",
+                rol: "docente"
+            },
+            {
+                email: "apoderado@gmail.com",
+                password: "123456",
+                rol: "apoderado"
+            }
+        ];
+
+        setData("usuarios", usuariosDefault);
+        console.log("Usuarios por defecto creados");
+    }
+})();
+
 
 // ================= REGISTRO =================
 function register() {
@@ -13,7 +40,6 @@ function register() {
 
     let usuarios = getData("usuarios") || [];
 
-    // evitar duplicados
     let existe = usuarios.find(u => u.email === email);
     if (existe) {
         alert("El usuario ya existe");
@@ -52,10 +78,7 @@ function login() {
 
     if (user) {
         localStorage.setItem("session", JSON.stringify(user));
-
-        // pequeña mejora UX
         alert("Bienvenido " + user.rol);
-
         window.location.href = "dashboard.html";
     } else {
         alert("Credenciales incorrectas");
